@@ -3,11 +3,11 @@ const add = function(x, y) {
 };
 
 const subtract = function(x, y) {
-	return x - y;
+	return (x - y);
 };
 
 const sum = function(numArray) {
-  var theSum;
+  var theSum = 0;
 	for (let i = 0; i < numArray.length; i++) {
     theSum += numArray[i];
   }
