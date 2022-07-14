@@ -1,4 +1,7 @@
 const repeatString = function(someString, someInt) {
+    if (someInt < 0) {
+        return "ERROR"
+    }
     return someString.repeat(someInt);
 };
 
