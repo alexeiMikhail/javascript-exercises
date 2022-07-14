@@ -1,11 +1,20 @@
-const removeFromArray = function(arr, toDelete) {
+const removeFromArray = function(arr) {
+    var argArray = arguments;
     var newArray = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (toDelete != arr[i]){
-            newArray.push(arr[i]);
+    var workingArray = arr;
+    var deleteMe;
+
+    for (let i = 1; i < argArray.length; i++) {
+        deleteMe = argArray[i];
+        for (let j = 0; j < workingArray.length; j++) {
+            if (deleteMe !== workingArray[j]) {
+                newArray.push(workingArray[j]);
+            }
         }
+        workingArray = newArray;
+        newArray = [];
     }
-    return newArray;
+    return workingArray;
 };
 
 // Do not edit below this line
