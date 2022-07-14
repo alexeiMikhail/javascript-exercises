@@ -1,6 +1,5 @@
 const palindromes = function (str) {
-    str = str.replace(/[^\w\s\']|_/g, "")
-         .replace(/\s+/g, " ");
+    str = str.replace(/[^\w\']|_/g, "");
     str = str.toLowerCase();
     if (str.split("").reverse().join("") == str) {
         return true;
